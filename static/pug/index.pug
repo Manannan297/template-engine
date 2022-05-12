@@ -1,8 +1,14 @@
 extends layout/layout
 
+block variables
+  - var title = "Главная страница"
+  - var pageClass = "index-page"
+  - var pathContentImg = 'static/images/content/'
+  - var pathCommonImg = 'static/images/common/'
+
 block content
   .content
-    main.index-page
+    main(class=pageClass)
       include components/hero
 
       include components/new-books/new-books
@@ -11,4 +17,4 @@ block content
 
       include components/reviews/reviews
 
-      include components/about/about
+      include components/about
