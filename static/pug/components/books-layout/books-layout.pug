@@ -1,0 +1,15 @@
+ul.books
+  each book in books
+    li.books__item
+      .books__inner
+        img.books__img(src= book.img alt= `Фото книги - "${book.name}"` width= book.width height= book.height)
+        .books__box
+          p.books__author= book.author
+          h3.books__name= book.name
+          p.books__description= book.description
+          p.books__stars
+            // svg иконка
+            span.books__star= book.stars
+          .books__wrapper
+            a.books__link(href= book.link) Подробнее
+            span.books__pages #{book.pages} страниц
